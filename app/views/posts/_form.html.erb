@@ -1,15 +1,22 @@
-<%= form_for @post, html: { multipart: true } do |f| %>
+<div class="flex_form">
+    <%= form_for @post, html: { multipart: true } do |f| %>
+    
+        <div class="form_group">
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+        </div>
 
-<%= f.label :title %>
-<%= f.text_field :title %>
+          <div class="form_group">
+            <%= f.label :image %>
+            <%= f.file_field :image %>
+        </div>
 
-<%= f.label :content %>
-<%= f.text_area :content %>
+    <div class="form_group">
+        <%= f.label :content %>
+        <%= f.text_area :content %>
+    </div>
 
-<%= f.label :image %>
-<%= f.file_field :image %>
+    <%= f.submit %>
 
-<%= f.submit %>
-
-
-<% end %>
+    <% end %>
+</div>

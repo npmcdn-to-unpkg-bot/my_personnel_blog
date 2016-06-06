@@ -1,0 +1,42 @@
+#posts_wrap
+    width: calc(100% - 20px)
+    margin: 0 auto
+    padding: 0 10px
+    .post_unit
+        width: calc(25% - 25px)
+        margin: 10px
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3)
+        text-align: center
+        position: relative
+        
+        @media (max-width: 775px)
+            width: calc(33.33% - 26.5px)
+        @media (max-width: 500px)
+            width: calc(50% - 30px)
+        img
+            display: block
+            width: 100%
+            height: auto
+        .thumb_overlay
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background: rgba(59, 172, 242, 0.9)
+            opacity: 0
+            transform: translateY(100%)
+            transform: scale(0)
+            transition: all 300ms ease-in-out
+            color: #fff
+            padding: 20px
+            .title
+                font-size: 24px
+                line-height: 1.2
+            .content
+                color: rgba(255, 255, 255, .7)
+        &:hover .thumb_overlay
+            opacity: 1
+            transform: translateY(0%)
+            transform: scale(1)
+    

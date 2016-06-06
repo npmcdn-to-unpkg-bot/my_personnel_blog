@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Liam's Blog - Web Development Tips &amp; Tricks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+  <script src="https://use.fontawesome.com/03738ffaa6.js"></script>
+  <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 </head>
 <body>
 
-<%= yield %>
+<div class="main_wrap">
+    <%= render 'layouts/header' %>
+    
+    <div class="page_content">
+
+        <%= yield %>
+        
+    </div>
+    
+</div>
 
 </body>
 </html>

@@ -12,5 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+//= require masonry/jquery.masonry
+
+
+$(document).ready(function() {
+    headerStuff();
+    
+    $('#posts_wrap').masonry({
+        itemSelector: '.post_unit'
+    });
+});
+
+function headerStuff() {
+    $('.mobile_nav_toggle').on('click', function() {
+        $(this).toggleClass('is_open');
+        $('.mobile_nav').toggleClass('is_open')
+    });
+}
